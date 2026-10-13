@@ -1,10 +1,19 @@
 # Support copy
 
-Support email: support@privacyfirstdevelopment.com
-Issues: https://github.com/privacyfirstdev/reddit-chat-message-cleanup/issues
+- Support email: support@privacyfirstdevelopment.com
+- Issues: https://github.com/privacyfirstdev/reddit-chat-message-cleanup/issues
 
-## Pinned issue: "Not working? Reddit may have changed something"
+## Pinned issue
 
+**Title**
+
+```text
+Not working? Reddit may have changed something
+```
+
+**Body**
+
+```markdown
 This extension works by reading Reddit's chat page, which Reddit can change at any time. If it stops finding or deleting messages:
 
 1. Make sure you're on the latest version (chrome://extensions).
@@ -14,20 +23,35 @@ This extension works by reading Reddit's chat page, which Reddit can change at a
 Please don't paste private chats or screenshots of conversations. Issues are public.
 
 Prefer email? support@privacyfirstdevelopment.com
+```
 
 ## Footer link
+
+```text
 Support: GitHub issues or support@privacyfirstdevelopment.com
+```
 
 ## Landing page (optional "Found a bug?" section)
+
+```markdown
 **Found a bug?** Reddit changes its site often. Tell us what broke on [GitHub](https://github.com/privacyfirstdev/reddit-chat-message-cleanup/issues/new/choose) or by email at support@privacyfirstdevelopment.com. Please don't include private chat content.
+```
 
 ## Popup link text
+
+```text
 Report a problem
+```
 
 ## Web Store support fields
-- Support URL: https://github.com/privacyfirstdev/reddit-chat-message-cleanup/issues
-- Support email: support@privacyfirstdevelopment.com
+
+- Support URL: `https://github.com/privacyfirstdev/reddit-chat-message-cleanup/issues`
+- Support email: `support@privacyfirstdevelopment.com`
 
 ## README snippet
+
+```markdown
 ## Support
+
 Found a bug? [Open an issue](https://github.com/privacyfirstdev/reddit-chat-message-cleanup/issues/new/choose) or email support@privacyfirstdevelopment.com. Issues are public, so don't include private chats.
+```
