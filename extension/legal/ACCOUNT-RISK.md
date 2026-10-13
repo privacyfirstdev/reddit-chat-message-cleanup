@@ -1,4 +1,4 @@
-# Account-Risk Notes: Unofficial Chat Message Cleanup
+# Account-Risk Notes: Chat Message Cleanup for Reddit
 
 **Read this before you use the Extension.** It is also a disclosure to include in the store listing.
 

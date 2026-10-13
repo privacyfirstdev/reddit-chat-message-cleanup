@@ -1,4 +1,4 @@
-# Privacy Policy: Unofficial Chat Message Cleanup
+# Privacy Policy: Chat Message Cleanup for Reddit
 
 **Effective date:** [EFFECTIVE DATE]
 **Developer contact:** [CONTACT EMAIL]

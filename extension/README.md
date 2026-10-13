@@ -1,4 +1,4 @@
-# Unofficial Chat Message Cleanup (Chrome extension)
+# Chat Message Cleanup for Reddit (Chrome extension)
 
 Manifest V3 port of `../reddit-chat-cleanup.js`. Deletes your own messages from your Reddit chats and can hide chats that had none. Not affiliated with Reddit.
 

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Unofficial Chat Message Cleanup",
-  "version": "0.1.0",
+  "name": "Chat Message Cleanup for Reddit",
+  "version": "1.0.0",
   "description": "Deletes your own messages from your Reddit chats. Unofficial; not affiliated with or endorsed by Reddit.",
   "permissions": ["activeTab", "scripting"],
   "icons": {

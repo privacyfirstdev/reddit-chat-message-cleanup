@@ -1,4 +1,4 @@
-# Terms of Use: Unofficial Chat Message Cleanup
+# Terms of Use: Chat Message Cleanup for Reddit
 
 **Effective date:** [EFFECTIVE DATE]
 
@@ -6,7 +6,7 @@
 
 ## 1. What this is
 
-Unofficial Chat Message Cleanup ("the Extension") is a browser extension that deletes messages you sent in your own Reddit chats, and can optionally hide chats that contain none of your messages. The Extension is provided by [DEVELOPER NAME] ("we", "us").
+Chat Message Cleanup for Reddit ("the Extension") is a browser extension that deletes messages you sent in your own Reddit chats, and can optionally hide chats that contain none of your messages. The Extension is provided by [DEVELOPER NAME] ("we", "us").
 
 **The Extension is not made by, affiliated with, sponsored by, or endorsed by Reddit, Inc.** "Reddit" is used only to describe the website the Extension works with.
 

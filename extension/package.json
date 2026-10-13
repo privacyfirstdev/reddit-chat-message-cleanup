@@ -1,6 +1,6 @@
 {
   "name": "reddit-chat-cleanup-extension",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "description": "Unofficial Chrome extension that deletes your own messages from Reddit chats. Not affiliated with Reddit.",
   "type": "module",
