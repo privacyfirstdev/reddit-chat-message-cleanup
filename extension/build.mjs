@@ -1,6 +1,7 @@
 // Bundles the content script and popup into dist/, and copies static assets.
 import { build } from "esbuild";
-import { copyFileSync, cpSync, mkdirSync, rmSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+import { copyFileSync, cpSync, mkdirSync, readFileSync, rmSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -29,3 +30,11 @@ for (const file of ["manifest.json", "src/popup/popup.html", "src/popup/popup.cs
 // Self-hosted font and extension icons. No remote requests from the popup.
 cpSync(join(root, "src/popup/fonts"), join(dist, "fonts"), { recursive: true });
 cpSync(join(root, "src/icons"), join(dist, "icons"), { recursive: true });
+
+// Web Store package: manifest.json must sit at the zip root, so zip from inside dist/.
+const { version } = JSON.parse(readFileSync(join(root, "manifest.json"), "utf8"));
+const zipName = `chat-cleanup-${version}.zip`;
+
+rmSync(join(root, zipName), { force: true });
+execFileSync("zip", ["-r", "-q", join(root, zipName), ".", "-x", "*.DS_Store"], { cwd: dist });
+console.log(`Packaged ${zipName}`);
