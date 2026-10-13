@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Unofficial Chat Message Cleanup",
+  "version": "0.1.0",
+  "description": "Deletes your own messages from your Reddit chats. Unofficial; not affiliated with or endorsed by Reddit.",
+  "permissions": ["activeTab", "scripting"],
+  "icons": {
+    "16": "icons/chrome-icon-r-16.png",
+    "48": "icons/chrome-icon-r-48.png",
+    "128": "icons/chrome-icon-r-128.png"
+  },
+  "action": {
+    "default_title": "Chat Message Cleanup",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/chrome-icon-r-16.png",
+      "32": "icons/chrome-icon-r-32.png"
+    }
+  },
+  "minimum_chrome_version": "120"
+}

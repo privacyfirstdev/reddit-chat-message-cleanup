@@ -1,0 +1,495 @@
+/*
+ * Light theme only. Colours come from privacy-first-dev/design-system/tokens.json
+ * (values copied here so the extension has no build-time dependency on that repo).
+ */
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fonts/figtree-latin-400-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fonts/figtree-latin-500-normal.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fonts/figtree-latin-700-normal.woff2") format("woff2");
+}
+
+:root {
+  --surface-100: #ffffff;
+  --surface-200: #f3f6fb;
+  --ink: #14213d;
+  --ink-muted: #4a5873;
+  --ink-on-warning: #14213d;
+  --field-border: #4a5873;
+  --line: #c9cdd5;
+  --brand-blue: #2257d9;
+  --on-blue: #ffffff;
+  --success: #1f6f3a;
+  --on-success: #ffffff;
+  --warning-fill: #ffca61;
+  --danger: #b3262c;
+  --on-danger: #ffffff;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 340px;
+  margin: 0;
+  padding: 16px;
+  background: var(--surface-100);
+  color: var(--ink);
+  font: 400 14px/20px Figtree, system-ui, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+h1 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+}
+
+b {
+  font-weight: 500;
+}
+
+.muted,
+.hint {
+  color: var(--ink-muted);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.small {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.label {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.ink {
+  color: var(--ink);
+}
+
+.masthead {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.masthead img {
+  flex: 0 0 auto;
+}
+
+.masthead p {
+  margin-top: 0;
+}
+
+/* Cards: tinted panels with radius-lg. */
+.card {
+  background: var(--surface-200);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--ink-muted);
+}
+
+.card p b {
+  color: var(--ink);
+}
+
+.card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.warning {
+  display: flex;
+  gap: 8px;
+  background: var(--warning-fill);
+  color: var(--ink-on-warning);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.callout-error {
+  display: flex;
+  gap: 8px;
+  background: #fdecec;
+  color: var(--danger);
+  border: 1px solid var(--danger);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.callout-error p + p {
+  margin-top: 4px;
+  color: var(--ink);
+}
+
+.callout-error a {
+  color: var(--danger);
+  font-weight: 700;
+}
+
+/* Everything is inert off reddit.com/chat; show it grayed out rather than hiding it. */
+.grayed {
+  opacity: 0.45;
+  filter: grayscale(1);
+}
+
+.grayed input:disabled,
+.grayed label {
+  cursor: default;
+}
+
+.bang {
+  font-weight: 700;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+label {
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"] {
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--field-border);
+  border-radius: var(--radius-md);
+  background: var(--surface-100);
+  color: var(--ink);
+  font: inherit;
+  width: 100%;
+}
+
+input::placeholder {
+  color: var(--ink-muted);
+}
+
+.checks {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label.check {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-weight: 400;
+}
+
+label.check input {
+  width: 18px;
+  height: 18px;
+  margin: 1px 0 0;
+  flex: 0 0 auto;
+  accent-color: var(--brand-blue);
+}
+
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  line-height: 16px;
+  border: 1px solid var(--field-border);
+  border-radius: var(--radius-md);
+  padding: 0 6px;
+  color: var(--ink-muted);
+}
+
+.mode-note {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--ink-muted);
+  margin: 8px 0;
+}
+
+.mode-note[hidden] {
+  display: none;
+}
+
+/* Keep the same space above the buttons when the note is hidden. */
+.mode-note[hidden] + .row {
+  margin-top: 8px;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+button {
+  height: 40px;
+  padding: 0 12px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--field-border);
+  background: var(--surface-100);
+  color: var(--ink);
+  font: inherit;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 2px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+button.secondary {
+  flex: 1;
+}
+
+button.primary {
+  flex: 1.4;
+  background: var(--brand-blue);
+  border-color: var(--brand-blue);
+  color: var(--on-blue);
+  font-weight: 700;
+}
+
+button.danger {
+  flex: 1.4;
+  background: var(--danger);
+  border-color: var(--danger);
+  color: var(--on-danger);
+  font-weight: 700;
+}
+
+button.small {
+  height: 32px;
+  padding: 0 12px;
+  font-size: 13px;
+  align-self: flex-start;
+}
+
+button.wide {
+  width: 100%;
+  height: 44px;
+  margin-top: 4px;
+}
+
+.error {
+  color: var(--danger);
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.error[hidden] {
+  display: none;
+}
+
+/* Page check results. */
+.check-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.check-list li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.check-icon {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.check-icon.ok {
+  background: var(--success);
+  color: var(--on-success);
+}
+
+.check-icon.fail {
+  background: var(--danger);
+  color: var(--on-danger);
+}
+
+.check-list .detail {
+  display: block;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--ink-muted);
+}
+
+.check-list .fail-name {
+  color: var(--danger);
+}
+
+.card .check-summary {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--ink);
+  background: var(--surface-100);
+}
+
+/* Status card, shown while a run is active. */
+.status-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.status-phase {
+  font-weight: 500;
+}
+
+.status-head .muted {
+  margin-left: auto;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--brand-blue);
+  flex: 0 0 auto;
+}
+
+.tiles {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.tile {
+  background: var(--surface-100);
+  border-radius: var(--radius-md);
+  padding: 8px 12px;
+}
+
+.tile dt {
+  color: var(--ink-muted);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.tile dd {
+  margin: 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.tile dd.failures {
+  color: var(--danger);
+}
+
+.log {
+  height: 160px;
+  overflow: auto;
+  margin: 0;
+  box-sizing: border-box;
+  background: var(--surface-100);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 8px;
+  font: 400 12px/18px ui-monospace, Menlo, monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
+  color: var(--ink);
+}
+
+/* Footer. */
+footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.footer-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.coffee {
+  color: var(--brand-blue);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+[hidden] {
+  display: none !important;
+}

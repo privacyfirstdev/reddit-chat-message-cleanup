@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chat Message Cleanup</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="masthead">
+      <img src="icons/chrome-icon-r-32.png" width="32" height="32" alt="" />
+      <div>
+        <h1>Chat Message Cleanup</h1>
+        <p class="muted">Unofficial. Not affiliated with Reddit.</p>
+      </div>
+    </header>
+
+    <div id="page-state" class="callout-error" role="alert" hidden>
+      <span aria-hidden="true" class="bang">!</span>
+      <div>
+        <p><b>Open your Reddit chats first</b></p>
+        <p>This works only in a tab showing <a id="chat-link" href="https://www.reddit.com/chat" target="_blank" rel="noopener">reddit.com/chat</a>. Open it in this tab, then reopen this extension.</p>
+      </div>
+    </div>
+
+    <div id="warning" class="warning" role="note">
+      <span aria-hidden="true" class="bang">!</span>
+      <span><b>Deleting is permanent.</b> Reddit may flag automated activity, and your account could be affected - though this has not been experienced in test runs. Use this at your own risk.</span>
+    </div>
+
+    <section id="form-section">
+      <div class="card">
+        <div class="field">
+          <label for="username">Your Reddit username</label>
+          <input id="username" type="text" autocomplete="off" placeholder="Without u/" maxlength="30" />
+          <span class="hint">Kept in local memory. Never saved or sent.</span>
+        </div>
+
+        <div class="field">
+          <label for="max-chats">Max chats to process</label>
+          <input id="max-chats" type="number" min="1" step="1" placeholder="Blank for no limit" />
+        </div>
+
+        <div class="checks">
+          <label class="check">
+            <input id="test-mode" type="checkbox" checked />
+            <span><b>Test mode.</b> Simulate running this without deleting messages.</span>
+          </label>
+          <label class="check">
+            <input id="hide-empty" type="checkbox" />
+            <span>Hide chats when all my messages have been deleted from that chat <span class="tag">Experimental</span></span>
+          </label>
+        </div>
+      </div>
+
+      <p id="mode-note" class="mode-note"><b>Test mode is on.</b> Turn it off to begin deletions.</p>
+
+      <div class="row">
+        <button id="check" type="button" class="secondary">Check page</button>
+        <button id="start" type="button" class="primary">Count matches</button>
+      </div>
+
+      <p id="form-error" class="error" role="alert" hidden></p>
+
+      <section id="check-result" class="card" aria-labelledby="check-heading" hidden>
+        <div class="card-head">
+          <h2 id="check-heading">Page check</h2>
+          <span id="check-time" class="muted"></span>
+        </div>
+        <ul id="check-list" class="check-list"></ul>
+        <p id="check-summary" class="check-summary" role="status"></p>
+      </section>
+    </section>
+
+    <section id="status-section" class="card" aria-live="polite" hidden>
+      <div class="status-head">
+        <span class="dot" aria-hidden="true"></span>
+        <span id="phase" class="status-phase">Idle</span>
+        <span id="mode-label" class="muted"></span>
+      </div>
+
+      <p class="muted">Now in <b id="chat" class="ink">-</b></p>
+
+      <dl class="tiles">
+        <div class="tile"><dt>Chats</dt><dd id="chats">0</dd></div>
+        <div class="tile"><dt id="count-label">Would delete</dt><dd id="count">0</dd></div>
+        <div class="tile"><dt>Complete</dt><dd id="complete">0</dd></div>
+        <div class="tile"><dt>Failures</dt><dd id="failures" class="failures">0</dd></div>
+      </dl>
+
+      <p class="muted label">Activity</p>
+      <pre id="log" class="log"></pre>
+      <p class="muted small">Pauses while this tab is hidden. Closing this popup does not stop the run.</p>
+
+      <button id="stop" type="button" class="danger wide" hidden>Stop</button>
+    </section>
+
+    <footer>
+      <div class="footer-row">
+        <button id="diagnostics" type="button" class="secondary small">Copy diagnostics</button>
+        <span id="diag-result" class="muted"></span>
+      </div>
+      <a class="coffee" href="https://buymeacoffee.com/privacyfirstdevelopment" target="_blank" rel="noopener">Found this useful? Buy me a coffee.</a>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
