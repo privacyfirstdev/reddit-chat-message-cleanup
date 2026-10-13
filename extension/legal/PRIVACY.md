@@ -1,9 +1,7 @@
 # Privacy Policy: Chat Message Cleanup for Reddit
 
-**Effective date:** [EFFECTIVE DATE]
-**Developer contact:** [CONTACT EMAIL]
-
-> DRAFT. Have a lawyer review before publishing. Not legal advice.
+**Effective date:** October 13, 2026
+**Developer contact:** support@privacyfirstdevelopment.com
 
 ## Summary
 
@@ -49,4 +47,4 @@ If the extension's data handling changes, we will update this policy and the ver
 
 ## Contact
 
-[CONTACT EMAIL]
+support@privacyfirstdevelopment.com

@@ -1,12 +1,10 @@
 # Terms of Use: Chat Message Cleanup for Reddit
 
-**Effective date:** [EFFECTIVE DATE]
-
-> DRAFT. Have a lawyer review before publishing. Not legal advice.
+**Effective date:** October 13, 2026
 
 ## 1. What this is
 
-Chat Message Cleanup for Reddit ("the Extension") is a browser extension that deletes messages you sent in your own Reddit chats, and can optionally hide chats that contain none of your messages. The Extension is provided by [DEVELOPER NAME] ("we", "us").
+Chat Message Cleanup for Reddit ("the Extension") is a browser extension that deletes messages you sent in your own Reddit chats, and can optionally hide chats that contain none of your messages. The Extension is provided by Privacy First Development ("we", "us").
 
 **The Extension is not made by, affiliated with, sponsored by, or endorsed by Reddit, Inc.** "Reddit" is used only to describe the website the Extension works with.
 
@@ -53,10 +51,6 @@ Nothing in these terms gives you any right to use Reddit's trademarks, logos, or
 
 We may update these terms. The updated terms apply from the date shown above. Continued use after an update means you accept it.
 
-## 10. Governing law
+## 10. Contact
 
-[GOVERNING LAW AND JURISDICTION]
-
-## 11. Contact
-
-[CONTACT EMAIL]
+support@privacyfirstdevelopment.com

@@ -2,8 +2,6 @@
 
 **Read this before you use the Extension.** It is also a disclosure to include in the store listing.
 
-> DRAFT. Reddit's current rules are not verified in this document. Read them yourself (see section 2).
-
 ## 1. What can go wrong
 
 - **Account action by Reddit.** Automated activity can be detected. Reddit may rate-limit your account, restrict certain actions, flag it for review, or suspend it. Restrictions may be temporary or permanent, and we cannot predict or prevent them.
