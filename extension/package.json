@@ -4,6 +4,9 @@
   "private": true,
   "description": "Unofficial Chrome extension that deletes your own messages from Reddit chats. Not affiliated with Reddit.",
   "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "build": "node build.mjs",
     "typecheck": "tsc --noEmit"

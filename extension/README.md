@@ -4,7 +4,7 @@ Manifest V3 port of `../reddit-chat-cleanup.js`. Deletes your own messages from 
 
 ## Build
 
-Requires Node 18 or newer. Node 22 is not needed. This uses esbuild and TypeScript rather than WXT, because WXT requires Node 22.
+Requires Node 18 or newer. `.nvmrc` pins 20.17.0, so run `nvm use` first. Use a Node build that matches your CPU (arm64 on Apple Silicon), or esbuild will fail to start. This uses esbuild and TypeScript rather than WXT, because WXT requires Node 22.
 
 ```bash
 npm install
