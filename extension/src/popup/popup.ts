@@ -63,6 +63,8 @@ const ui = {
   count: $<HTMLElement>("count"),
   complete: $<HTMLElement>("complete"),
   failures: $<HTMLElement>("failures"),
+  thanks: $<HTMLElement>("thanks"),
+  thanksCount: $<HTMLElement>("thanks-count"),
   log: $<HTMLPreElement>("log"),
   diagnostics: $<HTMLButtonElement>("diagnostics"),
   diagResult: $<HTMLSpanElement>("diag-result"),
@@ -163,6 +165,11 @@ function render(snap: RunSnapshot): void {
   ui.count.textContent = String(testRun ? snap.wouldDelete : snap.messagesDeleted);
   ui.complete.textContent = String(snap.chatsComplete);
   ui.failures.textContent = String(snap.failures.length);
+
+  // Ask for support only at the moment of value: a live run that finished and deleted something.
+  const finishedLive = !snap.running && !snap.stopped && !!snap.finishedAt && !testRun;
+  ui.thanks.hidden = !(finishedLive && snap.messagesDeleted > 0);
+  ui.thanksCount.textContent = String(snap.messagesDeleted);
 
   // Keep scrolled to the bottom only if the user was already there.
   const atBottom =

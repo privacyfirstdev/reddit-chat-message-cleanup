@@ -451,6 +451,36 @@ button.wide {
   color: var(--danger);
 }
 
+/* Donation ask, shown after a finished live run. */
+.card .thanks {
+  background: var(--surface-100);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--ink);
+}
+
+.card .thanks p {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--ink);
+}
+
+.card .thanks b {
+  font-weight: 700;
+}
+
+.thanks a {
+  color: var(--brand-blue);
+  font-weight: 500;
+  text-decoration: underline;
+}
+
 .log {
   height: 160px;
   overflow: auto;
